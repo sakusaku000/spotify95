@@ -12,12 +12,13 @@ module.exports = {
             main:"#c3c3c3",
             dark:"#404040"
           },
-          blue:"#010081"
+          blue:"#010081",
+          green:"#008080"
         }
       }
     },
     fontFamily:{
-      sans:["DS", "sans-serif"]
+      sans:["PX-Sans", "sans-serif"]
     }
   },
   plugins: [],

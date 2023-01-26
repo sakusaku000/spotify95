@@ -1,10 +1,10 @@
 html, body {
-    @apply bg-windows-gray-main;
+    @apply bg-windows-gray-main text-[8px];
 }
 
 @font-face {
-    font-family: "DS";
-    src: url("/assets/font/DS.ttf");
+    font-family: "PX-Sans";
+    src: url("/assets/font/px_sans_nouveaux.ttf");
 }
 
 .win-border-var1 {
