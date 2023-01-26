@@ -1,6 +1,6 @@
 <template>
-    <MusicPlayer/>
-    <!-- <Authenticate/> -->
+    <!-- <MusicPlayer/> -->
+    <Authenticate/>
 </template>
 
 <script>
