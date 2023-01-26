@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed left-1 top-12 bottom-20 w-[325px] bg-white win-border-var2 p-3 overflow-y-scroll">
+    <div class="fixed left-1 top-12 bottom-20 w-[325px] bg-white win-border-var2 p-3 overflow-y-auto">
         <SectionHeader>Library</SectionHeader>
         <MenuOption>Albums</MenuOption>
         <MenuOption>Artists</MenuOption>
