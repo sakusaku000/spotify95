@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed top-10 bottom-16 left-[330px] right-1 bg-white win-border-var2 p-3 overflow-y-scroll">
+    <div class="fixed top-12 bottom-20 left-[330px] right-1 bg-white win-border-var2 p-3 overflow-y-scroll">
         <SectionHeader :icon="true">Songs</SectionHeader>
         <SongList>
             <SongEntry title="Panorama" artist="IZ*ONE" album="One Reeler / Act IV" length="3:43"/>
