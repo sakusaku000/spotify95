@@ -20,6 +20,9 @@ export default {
         Copyright,
         Error,
         Welcome
+    },
+    mounted() {
+        this.$router.replace({path:'/'});
     }
 }
 </script>

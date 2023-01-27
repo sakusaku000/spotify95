@@ -1,18 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // views
+import Index from '../views/Index.vue';
 import Songs from '../views/Songs.vue';
 
 
 const routes = [
     {
-        path:"/:pathMatch(.*)*",
-        name:"Not found",
-        redirect:"/songs"
+        path:"/",
+        name:"Index",
+        component:Index
     },
     {
         path:"/songs",
-        name:"Songs - Spotify-95",
+        name:"Songs",
         component:Songs
     }
 ]
