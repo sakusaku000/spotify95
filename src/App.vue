@@ -4,6 +4,8 @@
     <Authenticate v-if="$store.state.authenticationNeeded || $store.state.error.show"/>
 
     <MusicPlayer v-if="$store.state.ready"/>
+
+    <!-- a -->
 </template>
 
 <script>
