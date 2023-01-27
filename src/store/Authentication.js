@@ -27,7 +27,7 @@ export default {
                 try {
                     const tokens = await axios.post("/api/token/refresh", {token:localStorage.getItem("refresh")});
                     sessionStorage.setItem("access", tokens.data.token);
-                    context.rootState.api.setAccessToken(refreshRequest.data.token);
+                    context.rootState.api.setAccessToken(tokens.data.token);
 
                     context.commit("backgroundTokenRefresh");
         
