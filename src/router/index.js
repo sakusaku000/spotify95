@@ -8,10 +8,10 @@ const routes = [
     {
         path:"/:pathMatch(.*)*",
         name:"Not found",
-        redirect:"/"
+        redirect:"/songs"
     },
     {
-        path:"/",
+        path:"/songs",
         name:"Songs - Spotify-95",
         component:Songs
     }

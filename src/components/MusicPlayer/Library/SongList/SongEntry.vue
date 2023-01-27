@@ -21,7 +21,7 @@ export default {
         title:String,
         artist:String,
         album:String,
-        length:String,
+        length:Number,
         id:String
     },
     methods:{

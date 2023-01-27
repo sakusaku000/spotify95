@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import MusicPlayer from './components/Layout/MusicPlayer/MusicPlayer.vue';
-import Authenticate from './components/Layout/Authenticate/Authenticate.vue';
+import MusicPlayer from './components/MusicPlayer/MusicPlayer.vue';
+import Authenticate from './components/Authenticate/Authenticate.vue';
 import BackgroundIcon from './components/BackgroundIcon.vue';
 
 export default {
