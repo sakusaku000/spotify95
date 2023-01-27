@@ -50,9 +50,15 @@ export default {
     },
     methods:{
         async fetchData() {
-            await this.$store.dispatch("user/fetch");
-            await this.$store.dispatch("library/fetch");
-            this.$store.commit("setReady", true);
+            try {
+                await this.$store.dispatch("user/fetch");
+                await this.$store.dispatch("library/fetch");
+                this.$store.commit("setReady", true);
+            } catch (err) {
+                console.error(err);
+                this.$store.commit("setReady", false);
+                this.$store.commit("showError", err);
+            }
         }
     }
 }

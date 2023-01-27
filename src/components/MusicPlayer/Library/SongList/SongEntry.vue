@@ -1,9 +1,9 @@
 <template>
     <tr :class="`${(activeSong) ? 'bg-windows-blue text-white font-bold' : ''} cursor-pointer hover:bg-windows-gray-light`">
-        <td>{{title}}</td>
-        <td>{{artist}}</td>
-        <td>{{album}}</td>
-        <td>{{formatTime(length)}}</td>
+        <td class="truncate text-ellipsis">{{title || ""}}</td>
+        <td class="truncate text-ellipsis" v-if="artist">{{artist || ""}}</td>
+        <td class="truncate text-ellipsis" v-if="album">{{album || ""}}</td>
+        <td class="truncate text-ellipsis">{{formatTime(length) || ""}}</td>
     </tr>
 </template>
 
@@ -26,7 +26,11 @@ export default {
     },
     methods:{
         formatTime(ms) {
-            return formatDuration(ms);
+            if (ms) {
+                return formatDuration(ms);
+            } else {
+                return 0;
+            }
         }
     }
 }

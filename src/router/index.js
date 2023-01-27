@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // views
 import Index from '../views/Index.vue';
 import Songs from '../views/Songs.vue';
+import Albums from '../views/Albums.vue';
 
 
 const routes = [
@@ -15,6 +16,11 @@ const routes = [
         path:"/songs",
         name:"Songs",
         component:Songs
+    },
+    {
+        path:"/albums",
+        name:"Albums",
+        component:Albums
     }
 ]
 
