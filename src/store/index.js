@@ -6,6 +6,9 @@ const api = new SpotifyWebApi({
 });
 
 // modules
+import Authentication from './Authentication.js';
+import Library from "./Library.js";
+import User from "./User.js";
 
 export default createStore({
     state:{
@@ -21,12 +24,22 @@ export default createStore({
         setReady(state, ready) {
             state.ready = ready;
         },
+        showSplash(state) {
+            state.authenticationNeeded = true;
+        },
         showError(state, error) {
+            state.error.ready = false;
+            state.error.authenticationNeeded = false;
             state.error.show = true;
             state.error.message = error;
+        },
+        setAccessToken(state, token) {
+            state.api.setAccessToken(token);
         }
     },
     modules:{
-
+        authentication:Authentication,
+        library:Library,
+        user:User
     }
 });

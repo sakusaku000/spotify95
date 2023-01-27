@@ -3,11 +3,13 @@
         <td>{{title}}</td>
         <td>{{artist}}</td>
         <td>{{album}}</td>
-        <td>{{length}}</td>
+        <td>{{formatTime(length)}}</td>
     </tr>
 </template>
 
 <script>
+import formatDuration from 'format-duration';
+
 export default {
     name:"SongEntry",
     data() {
@@ -21,6 +23,11 @@ export default {
         album:String,
         length:String,
         id:String
+    },
+    methods:{
+        formatTime(ms) {
+            return formatDuration(ms);
+        }
     }
 }
 </script>

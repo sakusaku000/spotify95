@@ -12,6 +12,9 @@
 <script>
 export default {
     name:"AuthenticateError",
+    mounted() {
+        window.history.replaceState({}, "Spotify-95", "/");
+    },
     methods:{
         reload() {
             window.location.reload();

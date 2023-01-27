@@ -18,7 +18,8 @@ app.get("/api/redirect", (req, res) => {
         "user-read-currently-playing", 
         "playlist-read-private", 
         "user-modify-playback-state", 
-        "user-read-playback-state"
+        "user-read-playback-state",
+        "user-follow-read"
     ]);
     return res.redirect(authURL);
 });

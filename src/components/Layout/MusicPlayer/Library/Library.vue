@@ -2,9 +2,13 @@
     <div class="fixed top-12 bottom-20 left-[330px] right-1 bg-white win-border-var2 p-3 overflow-y-auto">
         <SectionHeader :icon="true">Songs</SectionHeader>
         <SongList>
-            <SongEntry title="Panorama" artist="IZ*ONE" album="One Reeler / Act IV" length="3:43"/>
-            <SongEntry title="Panorama" artist="IZ*ONE" album="One Reeler / Act IV" length="3:43"/>
-            <SongEntry title="Panorama" artist="IZ*ONE" album="One Reeler / Act IV" length="3:43"/>
+            <SongEntry 
+            v-for="song in $store.state.library.songs" 
+            :key="song.track.id" 
+            :title="song.track.name" 
+            :artist="song.track.artists[0].name" 
+            :album="song.track.album.name" 
+            :length="song.track.duration_ms"/>
         </SongList>
     </div>
 </template>

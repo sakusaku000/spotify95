@@ -6,5 +6,5 @@
 
     <p>You need to sign in with your Spotify Account to use this program.</p>
 
-    <button class="win-button">Sign In</button>
+    <a href="/api/redirect" class="win-button">Sign In</a>
 </template>
