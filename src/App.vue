@@ -9,7 +9,7 @@
 <script>
 import MusicPlayer from './components/Layout/MusicPlayer/MusicPlayer.vue';
 import Authenticate from './components/Layout/Authenticate/Authenticate.vue';
-import BackgroundIcon from './components/Layout/BackgroundIcon.vue';
+import BackgroundIcon from './components/BackgroundIcon.vue';
 
 export default {
     name:"App",
