@@ -55,22 +55,28 @@ export default {
                     context.commit("addSongs", songsFetch1.body.items);
                     console.log(context.state.songs.page);
                     const songsFetch2 = await context.rootState.api.getMySavedTracks({limit:50, offset:context.state.songs.page});
+                    context.commit("setLoading", 30, {root:true});
                     context.commit("increaseSongPage");
                     context.commit("addSongs", songsFetch2.body.items);
+                    context.commit("setLoading", 40, {root:true});
 
                     const albumsFetch1 = await context.rootState.api.getMySavedAlbums({limit:50});
                     context.commit("increaseAlbumPage");
                     context.commit("addAlbums", albumsFetch1.body.items);
                     const albumsFetch2 = await context.rootState.api.getMySavedAlbums({limit:50, offset:context.state.albums.page});
+                    context.commit("setLoading", 50, {root:true});
                     context.commit("increaseAlbumPage");
                     context.commit("addAlbums", albumsFetch2.body.items);
+                    context.commit("setLoading", 70, {root:true});
 
                     const artistsFetch1 = await context.rootState.api.getFollowedArtists({limit:50});
                     context.commit("increaseArtistPage");
                     context.commit("addArtists", artistsFetch1.body.items);
+                    context.commit("setLoading", 80, {root:true});
                     const artistsFetch2 = await context.rootState.api.getFollowedArtists({limit:50, offset:context.state.artists.page});
                     context.commit("increaseArtistPage");
                     context.commit("addArtists", artistsFetch2.body.items);
+                    context.commit("setLoading", 100, {root:true});
 
                     return resolve();
                 } catch (err) {

@@ -51,13 +51,19 @@ export default {
     methods:{
         async fetchData() {
             try {
+                this.$store.commit("showLoading", true);
                 await this.$store.dispatch("user/fetch");
+                this.$store.commit("setLoading", 25);
                 await this.$store.dispatch("library/fetch");
                 this.$store.commit("setReady", true);
+                this.$store.commit("showLoading", false);
+                this.$store.commit("setLoading", 0);
             } catch (err) {
                 console.error(err);
                 this.$store.commit("setReady", false);
                 this.$store.commit("showError", err);
+                this.$store.commit("showLoading", false);
+                this.$store.commit("setLoading", 0);
             }
         }
     }

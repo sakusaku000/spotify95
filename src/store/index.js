@@ -18,6 +18,10 @@ export default createStore({
         error:{
             show:false,
             message:""
+        },
+        loading:{
+            show:true,
+            progress:0
         }
     },
     mutations:{
@@ -35,6 +39,12 @@ export default createStore({
         },
         setAccessToken(state, token) {
             state.api.setAccessToken(token);
+        },
+        showLoading(state, show) {
+            state.loading.show = show
+        },
+        setLoading(state, progress) {
+            state.loading.progress = progress;
         }
     },
     modules:{
